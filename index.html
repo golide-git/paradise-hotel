@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paradise Resort | Book your stay</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <a class="logo" href="#top">Paradise Resort</a>
+    <a class="button small-button" href="#booking">Book now</a>
+  </header>
+
+  <main id="top">
+    <section class="hero" id="top">
+      <p class="eyebrow">Your private island escape</p>
+      <h1>Relax by the sea.</h1>
+      <p>A peaceful resort with bright rooms, warm service, and the sea just outside your door.</p>
+      <a class="button" href="#booking">Plan your stay</a>
+    </section>
+
+    <section class="booking" id="booking">
+      <h2>Book your stay</h2>
+      <form class="booking-form" id="booking-form">
+        <label>
+          <span>Check in</span>
+          <input type="date" id="check-in" required>
+        </label>
+        <label>
+          <span>Check out</span>
+          <input type="date" id="check-out" required>
+        </label>
+        <label>
+          <span>Guests</span>
+          <select id="guests">
+            <option value="1">1 guest</option>
+            <option value="2" selected>2 guests</option>
+            <option value="3">3 guests</option>
+            <option value="4">4 guests</option>
+            <option value="5">5 guests</option>
+            <option value="6">6 guests</option>
+          </select>
+        </label>
+        <button class="button" type="submit">Check availability</button>
+      </form>
+      <p class="form-message" id="form-message" role="status"></p>
+    </section>
+
+    <section class="rooms" id="rooms">
+      <p class="eyebrow">Find your view</p>
+      <h2>Rooms made for rest</h2>
+      <p>Every stay includes breakfast, Wi-Fi, and our warmest welcome.</p>
+      <div class="room-grid">
+        <article class="room-card">
+          <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=85" alt="Bright room with a large window">
+          <h3>Garden Room</h3>
+          <p>Quiet mornings, lush views</p>
+          <strong>R180 per night</strong>
+          <button class="room-button" type="button" data-room="Garden Room" data-price="180">Choose room</button>
+        </article>
+        <article class="room-card featured-room">
+          <span class="featured-label">Guest favorite</span>
+          <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=900&q=85" alt="Resort room with a sea view">
+          <h3>Ocean Suite</h3>
+          <p>Sunrise views, extra space</p>
+          <strong>R260 per night</strong>
+          <button class="room-button" type="button" data-room="Ocean Suite" data-price="260">Choose room</button>
+        </article>
+        <article class="room-card">
+          <img src="https://images.unsplash.com/photo-1584132967334-10e028bd69f7?auto=format&fit=crop&w=900&q=85" alt="Elegant private villa bedroom">
+          <h3>Private Villa</h3>
+          <p>Your own pool and patio</p>
+          <strong>R390 per night</strong>
+          <button class="room-button" type="button" data-room="Private Villa" data-price="390">Choose room</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="experience" id="experience">
+      <h2>Come for the view. Stay for the feeling.</h2>
+      <p>Enjoy fresh breakfast, slow afternoons by the pool, and beautiful sunsets.</p>
+    </section>
+  </main>
+
+  <div class="confirmation hidden" id="confirmation" role="status">
+    <h2>Booking request sent</h2>
+    <p id="confirmation-text"></p>
+    <button class="button" id="close-confirmation" type="button">Close</button>
+  </div>
+
+  <footer class="site-footer">
+    <a class="logo" href="#top">Paradise Resort</a>
+    <p>Made for slow days by the sea.</p>
+  </footer>
+</body>
+</html>
